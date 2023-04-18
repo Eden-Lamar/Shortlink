@@ -119,13 +119,13 @@ Content-Type: application/json
 
 **Single Responsibility Principle:**
 
-The **server.js** file has the single responsibility of setting up the server and configuring middleware.
-The **routes.js** file is responsible for defining the API endpoints and mapping them to the corresponding controller methods.
-The **shortLinkCtrl.js** file contains the controller methods for the API endpoints, each with a single responsibility: encoding, decoding, getting link stats, or redirecting URLs.
+-The **server.js** file has the single responsibility of setting up the server and configuring middleware.
+-The **routes.js** file is responsible for defining the API endpoints and mapping them to the corresponding controller methods.
+-The **shortLinkCtrl.js** file contains the controller methods for the API endpoints, each with a single responsibility: encoding, decoding, getting link stats, or redirecting URLs.
 
 **Dependency Inversion Principle:**
 
-The **routes.js** file uses the **shortLinkCtrl** module by importing and using its exported methods. This makes it easy to swap out the implementation of the shortLinkCtrl methods without changing the code in **routes.js**.
+-The **routes.js** file uses the **shortLinkCtrl** module by importing and using its exported methods. This makes it easy to swap out the implementation of the **shortLinkCtrl** methods without changing the code in **routes.js**.
 
 ## Conclusion
 
