@@ -1,0 +1,29 @@
+{
+	"name": "shortlink",
+	"version": "1.0.0",
+	"description": "ShortLink is a URL shortening service where you enter a URL such as https://google.com and it returns a short URL such as http://short.est/GeAi9K.",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Eden-Lamar/Shortlink.git"
+	},
+	"author": "Eden Lamar",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Eden-Lamar/Shortlink/issues"
+	},
+	"homepage": "https://github.com/Eden-Lamar/Shortlink#readme",
+	"dependencies": {
+		"express": "^4.18.2",
+		"nanoid": "^4.0.2",
+		"supertest": "^6.3.3"
+	},
+	"devDependencies": {
+		"colors": "^1.4.0",
+		"morgan": "^1.10.0"
+	}
+}
