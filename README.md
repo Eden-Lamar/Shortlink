@@ -22,14 +22,14 @@ cd Shortlink
 
 3. Install the dependencies:
 
-```npm install or npm i
-
+```
+npm install or npm i
 ```
 
 4. Start the server:
 
-```npm start
-
+```
+npm start
 ```
 
 5. The server should now be running on http://localhost:3000. You can test the API endpoints using Postman or any other HTTP client.
@@ -100,8 +100,8 @@ Content-Type: application/json
 To get statistics for a short URL, make a GET request to http://localhost:3000/statistic/:id, where :id is the ID portion of the short URL (e.g. ab1de3g in http://localhost:3000/s/ab1de3g).
 The response will contain the original URL and the number of visits:
 
-```GET http://localhost:3000/statistic/3qZz1pM
-
+```
+GET http://localhost:3000/statistic/3qZz1pM
 ```
 
 ### Response
