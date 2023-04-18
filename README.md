@@ -115,6 +115,18 @@ Content-Type: application/json
 }
 ```
 
+## SOLID Approach
+
+**Single Responsibility Principle:**
+
+The **server.js** file has the single responsibility of setting up the server and configuring middleware.
+The **routes.js** file is responsible for defining the API endpoints and mapping them to the corresponding controller methods.
+The **shortLinkCtrl.js** file contains the controller methods for the API endpoints, each with a single responsibility: encoding, decoding, getting link stats, or redirecting URLs.
+
+**Dependency Inversion Principle:**
+
+The **routes.js** file uses the **shortLinkCtrl** module by importing and using its exported methods. This makes it easy to swap out the implementation of the shortLinkCtrl methods without changing the code in **routes.js**.
+
 ## Conclusion
 
 ShortLink is a tool that can be used to create short, easy-to-remember URLs. It can be used in a variety of applications, from social media marketing to e-commerce, and can help improve user experience by reducing the length of URLs and making them more shareable. The app is built using Node.js and the Express framework, and uses nanoid for generating unique IDs. It follows best practices and SOLID principles, and is designed with clean code in mind. By following the instructions outlined in this documentation, you can easily set up and run the app on your local machine or a web server. With this app, you can create and manage short links for your website, track the number of clicks and visits to those links, and improve the overall performance and user experience of your website.
