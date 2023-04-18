@@ -115,6 +115,16 @@ Content-Type: application/json
 }
 ```
 
+### Test
+
+Use the command
+
+```
+npm test
+```
+
+to run he test file using jest
+
 ## SOLID Approach
 
 **Single Responsibility Principle:**
