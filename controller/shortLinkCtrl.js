@@ -12,12 +12,11 @@ const encode = (req, res) => {
 		return res.status(400).json({ error: 'URL is required' });
 	}
 	const id = nanoid(7); // Generate a unique 7 character ID
+	// console.log(`Generated ID: ${id}`);
 	urlMap[id] = { url, visits: 0 }; // Store the URL and set visits to 0
 	const shortUrl = `http://localhost:3000/s/${id}`;
-	return res.status(201).json({
-		status: success,
-		shortUrl
-	});
+	console.log("\n", { shortUrl }, "\n")
+	return res.json({ shortUrl });
 }
 
 // @desc decode all links
@@ -34,6 +33,9 @@ const decode = (req, res) => {
 		return res.status(404).json({ error: 'Short URL not found' });
 	}
 	urlObject.visits += 1; // Increment the number of visits
+
+	console.log("\n", { url: urlObject.url }, "\n")
+
 	return res.json({ url: urlObject.url });
 }
 
@@ -47,12 +49,28 @@ const linkStat = (req, res) => {
 		return res.status(404).json({ error: 'Short URL not found' });
 	}
 	const { url, visits } = urlObject;
+
+	console.log("\n", { url, visits }, "\n")
 	return res.json({ url, visits });
 };
+
+// Endpoint to redirect a short URL to its original URL
+const redirectURL = (req, res) => {
+	const { id } = req.params;
+	const urlObject = urlMap[id];
+	if (!urlObject) {
+		return res.status(404).json({ error: 'Short URL not found' });
+	}
+	urlObject.visits += 1; // Increment the number of visits
+	const { url } = urlObject;
+	return res.redirect(url);
+}
+
 
 // export controllers
 module.exports = {
 	encode,
 	decode,
+	redirectURL,
 	linkStat
 }
