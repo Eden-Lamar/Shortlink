@@ -7,6 +7,10 @@ require("colors")
 
 const app = express();
 
+// middleware
+app.use(express.json());
+app.use(morgan("dev"));
+
 const port = process.env.PORT || 3000;
 
 
