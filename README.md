@@ -32,7 +32,7 @@ npm install or npm i
 npm start
 ```
 
-5. The server should now be running on http://localhost:3000. You can test the API endpoints using Postman or any other HTTP client.
+5. The server should now be running on `http://localhost:3000`. You can test the API endpoints using Postman or any other HTTP client.
 
 ## API endpoints
 
@@ -47,7 +47,7 @@ npm start
 
 ### Request
 
-To encode a URL, make a POST request to http://localhost:3000/encode with a JSON payload containing the URL:
+To encode a URL, make a POST request to `http://localhost:3000/encode` with a JSON payload containing the URL:
 
 ```POST http://localhost:3000/encode
 Content-Type: application/json
@@ -72,7 +72,7 @@ Content-Type: application/json
 
 ### Request
 
-To decode a short URL, make a POST request to http://localhost:3000/decode with a JSON payload containing the short URL:
+To decode a short URL, make a POST request to `http://localhost:3000/decode` with a JSON payload containing the short URL:
 
 ```
 POST http://localhost:3000/decode
@@ -97,7 +97,7 @@ Content-Type: application/json
 
 ### Request
 
-To get statistics for a short URL, make a GET request to http://localhost:3000/statistic/:id, where :id is the ID portion of the short URL (e.g. ab1de3g in http://localhost:3000/s/ab1de3g).
+To get statistics for a short URL, make a GET request to `http://localhost:3000/statistic/:id`, where :id is the ID portion of the short URL (e.g. ab1de3g in `http://localhost:3000/s/ab1de3g`).
 The response will contain the original URL and the number of visits:
 
 ```
